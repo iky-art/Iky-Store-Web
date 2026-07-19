@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimoni — Iky Store</title>
+<meta name="description" content="Testimoni klien Iky Store.">
+<link rel="icon" href="media/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.empty-state { max-width: 560px; margin: 0 auto; text-align: center; background: var(--panel); border: 1px dashed var(--line); border-radius: var(--radius); padding: 48px 32px; }
+.empty-state__icon { font-size: 2.6rem; margin-bottom: 16px; }
+.empty-state h2 { font-size: 1.3rem; }
+
+.promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 20px; margin-top: 48px; }
+.promise-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.promise-card__icon { font-size: 1.6rem; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="brand">
+      <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+      <span class="brand__name">Iky Store</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="navlinks-wrap" id="navMenu">
+      <div class="navlinks">
+        <a href="index.html" class="navlink">Beranda</a>
+        <a href="tentang.html" class="navlink">Tentang</a>
+        <a href="layanan.html" class="navlink">Layanan</a>
+        <a href="galeri.html" class="navlink">Galeri Karya</a>
+        <a href="testimoni.html" class="navlink">Testimoni</a>
+        <a href="kontak.html" class="btn btn--primary btn--sm">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="tag mb-16" style="margin:0 auto 16px;width:fit-content;"><span class="dot"></span>Testimoni</div>
+    <h1 class="reveal">Kata Klien</h1>
+    <p class="reveal">Jujur dan apa adanya — bukan testimoni karangan.</p>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0;">
+    <div class="empty-state reveal">
+      <div class="empty-state__icon">🌱</div>
+      <h2>Belum Ada Testimoni Klien</h2>
+      <p>Iky Store baru mulai buka jasa untuk umum, jadi belum ada review beneran yang bisa dipajang di sini. Daripada bikin testimoni palsu, lebih baik jujur — dan kamu bisa jadi yang pertama.</p>
+      <a href="kontak.html" class="btn btn--primary mt-16">Jadi Klien Pertama →</a>
+    </div>
+
+    <div class="sec-head reveal mt-48">
+      <h2>Yang Bisa Kamu Harapkan</h2>
+      <p>Karena belum ada review, ini yang bisa dijamin dari cara Iky Store kerja.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="promise-card reveal">
+        <div class="promise-card__icon">💬</div>
+        <h3>Komunikasi Langsung</h3>
+        <p style="font-size:.85rem;">Kamu chat langsung sama Iky, bukan admin/CS anonim yang cuma nerusin pesan.</p>
+      </div>
+      <div class="promise-card reveal">
+        <div class="promise-card__icon">🔍</div>
+        <h3>Progress Transparan</h3>
+        <p style="font-size:.85rem;">Update dibahas tiap tahap, bukan hilang kontak sampai deadline mepet.</p>
+      </div>
+      <div class="promise-card reveal">
+        <div class="promise-card__icon">💳</div>
+        <h3>Bisa Nego DP</h3>
+        <p style="font-size:.85rem;">Nggak wajib bayar lunas di depan — bisa DP dulu biar sama-sama nyaman.</p>
+      </div>
+      <div class="promise-card reveal">
+        <div class="promise-card__icon">📂</div>
+        <h3>Bukti Kerja Nyata</h3>
+        <p style="font-size:.85rem;">Belum ada testimoni klien, tapi ada <a href="galeri.html">contoh karya nyata</a> yang bisa kamu cek sendiri.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+          <span class="brand__name">Iky Store</span>
+        </a>
+        <p>Jasa pembuatan website portofolio custom — modern, cepat, dan dikerjain langsung 1-on-1 sama Iky.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="galeri.html">Galeri Karya</a>
+        <a href="testimoni.html">Testimoni</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/6287888424035" target="_blank">WhatsApp</a>
+        <a href="kontak.html">Halaman Kontak</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Iky Store</div>
+      <div class="mono">Website Portfolio Service</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

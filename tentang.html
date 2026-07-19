@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang — Iky Store</title>
+<meta name="description" content="Cerita di balik Iky Store — jasa pembuatan website portofolio yang dikerjain langsung oleh Iky.">
+<link rel="icon" href="media/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
+.about-visual { display: flex; justify-content: center; }
+.about-visual img { width: 240px; filter: drop-shadow(0 20px 50px rgba(59,130,246,.35)); }
+.value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 20px; }
+.value-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.value-card__icon { font-size: 1.8rem; margin-bottom: 12px; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; }
+.step-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; }
+.step-card__num { font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; color: var(--blue-light); margin-bottom: 8px; }
+
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="brand">
+      <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+      <span class="brand__name">Iky Store</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="navlinks-wrap" id="navMenu">
+      <div class="navlinks">
+        <a href="index.html" class="navlink">Beranda</a>
+        <a href="tentang.html" class="navlink">Tentang</a>
+        <a href="layanan.html" class="navlink">Layanan</a>
+        <a href="galeri.html" class="navlink">Galeri Karya</a>
+        <a href="testimoni.html" class="navlink">Testimoni</a>
+        <a href="kontak.html" class="btn btn--primary btn--sm">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="tag mb-16" style="margin:0 auto 16px;width:fit-content;"><span class="dot"></span>Tentang Kami</div>
+    <h1 class="reveal">Satu Orang, Satu Fokus: <br>Website yang Beneran Diperhatiin</h1>
+    <p class="reveal">Iky Store bukan agensi besar dengan puluhan tim — ini jasa personal yang dijalanin langsung sama Iky, dari desain sampai kirim file final.</p>
+  </section>
+
+  <section class="sec wrap">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <img src="media/logo.png" alt="Iky Store">
+      </div>
+      <div class="reveal">
+        <h2>Kenalan Sama Iky</h2>
+        <p>Iky adalah Founder &amp; CEO Team Apollo AI Studio, tim asal Indonesia yang membangun produk-produk AI seperti Apollo AI (platform chat multi-model) dan Apollo Academy (platform belajar coding gamified). Iky Store lahir dari kebiasaan yang sama: iterasi cepat, desain yang niat, dan nggak asal comot template.</p>
+        <p>Cara kerjanya mobile-first — banyak proses desain &amp; development dikerjain langsung dari HP lewat Termux. Jadi kalau kamu lihat website yang dibikin Iky Store terasa "hidup" (banyak animasi, detail kecil yang niat), itu karena memang begitu cara Iky membangun produk.</p>
+        <a href="galeri.html" class="btn btn--ghost mt-16">Lihat Contoh Karya →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Yang Iky Store Pegang Teguh</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-card__icon">🎯</div>
+        <h3>Nggak Asal Template</h3>
+        <p>Tiap website didesain ulang sesuai karakter &amp; kebutuhan, bukan tinggal ganti logo dari template yang sama ke semua orang.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card__icon">💬</div>
+        <h3>Komunikasi Transparan</h3>
+        <p>Kamu ngobrol langsung sama orang yang bikin websitenya, bukan admin/CS yang cuma nerusin pesan.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card__icon">🤝</div>
+        <h3>Jujur soal Proses</h3>
+        <p>Kalau ada kendala atau butuh waktu lebih, langsung dikomunikasikan — bukan didiemin sampai deadline lewat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Cara Kerja</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-card__num">1</div>
+        <h3>Pesan &amp; Brief</h3>
+        <p style="font-size:.85rem;">Pilih paket, chat WA, ceritain kebutuhan &amp; kirim referensi/konten kamu.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-card__num">2</div>
+        <h3>Proses Desain</h3>
+        <p style="font-size:.85rem;">Iky bikin desain &amp; bangun situsnya sesuai brief.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-card__num">3</div>
+        <h3>Review &amp; Revisi</h3>
+        <p style="font-size:.85rem;">Kamu cek hasilnya, kasih masukan, direvisi sesuai jatah paket.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-card__num">4</div>
+        <h3>Kelar &amp; Deploy</h3>
+        <p style="font-size:.85rem;">File final dikirim, siap kamu deploy sendiri atau dibantu setup.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+          <span class="brand__name">Iky Store</span>
+        </a>
+        <p>Jasa pembuatan website portofolio custom — modern, cepat, dan dikerjain langsung 1-on-1 sama Iky.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="galeri.html">Galeri Karya</a>
+        <a href="testimoni.html">Testimoni</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/6287888424035" target="_blank">WhatsApp</a>
+        <a href="kontak.html">Halaman Kontak</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Iky Store</div>
+      <div class="mono">Website Portfolio Service</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

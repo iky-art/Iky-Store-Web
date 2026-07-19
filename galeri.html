@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Karya — Iky Store</title>
+<meta name="description" content="Contoh kualitas kerja Iky — proyek-proyek yang sudah dibangun sebagai bukti kemampuan.">
+<link rel="icon" href="media/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 28px; }
+.gallery-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease, border-color .2s ease; }
+.gallery-card:hover { transform: translateY(-4px); border-color: rgba(123,150,255,.4); }
+.gallery-card__thumb { aspect-ratio: 16/10; background: linear-gradient(160deg, #142b5e, #0a1128); display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--line); }
+.gallery-card__body { padding: 24px; }
+.gallery-card__tag { font-family: var(--font-mono); font-size: .7rem; color: var(--blue-light); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; display: block; }
+.gallery-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.gallery-card p { font-size: .88rem; margin-bottom: 16px; }
+
+.note-box { background: var(--panel); border: 1px dashed var(--line); border-radius: var(--radius); padding: 24px 28px; max-width: 720px; margin: 0 auto; text-align: center; }
+.note-box p { margin: 0; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="brand">
+      <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+      <span class="brand__name">Iky Store</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="navlinks-wrap" id="navMenu">
+      <div class="navlinks">
+        <a href="index.html" class="navlink">Beranda</a>
+        <a href="tentang.html" class="navlink">Tentang</a>
+        <a href="layanan.html" class="navlink">Layanan</a>
+        <a href="galeri.html" class="navlink">Galeri Karya</a>
+        <a href="testimoni.html" class="navlink">Testimoni</a>
+        <a href="kontak.html" class="btn btn--primary btn--sm">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="tag mb-16" style="margin:0 auto 16px;width:fit-content;"><span class="dot"></span>Galeri Karya</div>
+    <h1 class="reveal">Bukti Kerja, Bukan Cuma Janji</h1>
+    <p class="reveal">Iky Store masih baru sebagai jasa, tapi Iky sendiri sudah membangun beberapa produk nyata. Ini beberapa di antaranya.</p>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0;">
+    <div class="gallery-grid">
+      <div class="gallery-card reveal">
+        <div class="gallery-card__thumb">🧑‍💻</div>
+        <div class="gallery-card__body">
+          <span class="gallery-card__tag">Portofolio Personal</span>
+          <h3>Portofolio Iky</h3>
+          <p>Portofolio pribadi Iky sendiri — tema gamified, loading screen video custom, sistem XP, dan visualisasi tech stack interaktif. Contoh paling lengkap dari apa yang bisa dibikin di paket Ultimate.</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-card__thumb">🤖</div>
+        <div class="gallery-card__body">
+          <span class="gallery-card__tag">Produk AI</span>
+          <h3>Apollo AI</h3>
+          <p>Platform chat AI multi-model yang dibangun Team Apollo AI Studio (dipimpin Iky) — bukti kemampuan membangun produk digital yang kompleks, bukan cuma landing page statis.</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-card__thumb">📖</div>
+        <div class="gallery-card__body">
+          <span class="gallery-card__tag">Platform Edukasi</span>
+          <h3>Apollo Academy</h3>
+          <p>Platform belajar coding gamified bergaya manga — materi per volume &amp; chapter, sistem XP, streak harian. Contoh pendekatan gamifikasi yang sama dipakai di paket Gamified/Ultimate Iky Store.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box reveal mt-48">
+      <p>📌 Iky Store baru mulai buka jasa untuk umum, jadi belum ada proyek klien yang bisa dipajang di sini. Contoh di atas adalah karya Iky sendiri sebagai bukti kualitas &amp; kemampuan. Jadi klien pertama yang karyanya dipajang di sini? <a href="kontak.html">Chat sekarang →</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+          <span class="brand__name">Iky Store</span>
+        </a>
+        <p>Jasa pembuatan website portofolio custom — modern, cepat, dan dikerjain langsung 1-on-1 sama Iky.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="galeri.html">Galeri Karya</a>
+        <a href="testimoni.html">Testimoni</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/6287888424035" target="_blank">WhatsApp</a>
+        <a href="kontak.html">Halaman Kontak</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Iky Store</div>
+      <div class="mono">Website Portfolio Service</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

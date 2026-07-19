@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iky Store — Jasa Pembuatan Website Portofolio</title>
+<meta name="description" content="Iky Store — jasa pembuatan website portofolio custom, modern, dan gamified. Dikerjain langsung 1-on-1 sama Iky.">
+<link rel="icon" href="media/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero { padding: 90px 0 70px; position: relative; overflow: hidden; }
+.hero__inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.hero h1 { font-size: clamp(2.4rem, 5.4vw, 3.6rem); letter-spacing: -1px; }
+.hero h1 .accent { background: linear-gradient(100deg, var(--blue-light), var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p.lead { font-size: 1.08rem; max-width: 480px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin: 28px 0 32px; }
+.hero-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero-visual img { width: 100%; max-width: 380px; filter: drop-shadow(0 30px 60px rgba(59,130,246,.35)); }
+.hero-visual::before {
+  content: ""; position: absolute; inset: -60px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,.18), transparent 65%);
+  z-index: -1;
+}
+
+.trust-band { padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.trust-band .wrap { display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; }
+.trust-item { display: flex; align-items: center; gap: 10px; font-size: .88rem; color: var(--slate); }
+.trust-item b { color: var(--white); }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; }
+.service-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; position: relative; }
+.service-card.featured { border-color: rgba(123,150,255,.5); background: linear-gradient(160deg, var(--panel2), var(--panel)); }
+.service-card__price { font-family: var(--font-display); font-weight: 900; font-size: 2rem; color: var(--white); margin: 10px 0 4px; }
+.service-card__price span { font-size: 1rem; color: var(--slate); font-weight: 500; }
+.service-card ul { list-style: none; margin: 18px 0 24px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.service-card li { font-size: .88rem; color: var(--slate); display: flex; gap: 8px; }
+.service-card li::before { content: "✓"; color: var(--ok); font-weight: 700; }
+
+.cta-band {
+  background: linear-gradient(120deg, #0d1b3d, #142b5e);
+  border: 1px solid var(--line); border-radius: 28px; padding: 56px 40px; text-align: center;
+}
+.cta-band h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+
+@media (max-width: 860px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero p.lead { margin-left: auto; margin-right: auto; }
+  .hero-btns, .hero-tags { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-visual img { max-width: 220px; }
+  .service-card.featured { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="brand">
+      <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+      <span class="brand__name">Iky Store</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="navlinks-wrap" id="navMenu">
+      <div class="navlinks">
+        <a href="index.html" class="navlink">Beranda</a>
+        <a href="tentang.html" class="navlink">Tentang</a>
+        <a href="layanan.html" class="navlink">Layanan</a>
+        <a href="galeri.html" class="navlink">Galeri Karya</a>
+        <a href="testimoni.html" class="navlink">Testimoni</a>
+        <a href="kontak.html" class="btn btn--primary btn--sm">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero__inner">
+      <div class="reveal">
+        <div class="tag mb-16"><span class="dot"></span>Jasa Pembuatan Website</div>
+        <h1>Website Portofolio yang Bikin <span class="accent">Orang Berhenti Scroll</span></h1>
+        <p class="lead">Desain custom, modern, dan siap pakai — dari landing page sampai portofolio personal, dikerjain langsung sama Iky. Bukan template generik.</p>
+        <div class="hero-btns">
+          <a href="layanan.html" class="btn btn--primary">Lihat Layanan &amp; Harga</a>
+          <a href="galeri.html" class="btn btn--ghost">Lihat Galeri Karya</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Desain Custom</span>
+          <span class="tag">Proses Cepat</span>
+          <span class="tag">Mobile-first</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="media/logo.png" alt="Iky Store">
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-band">
+    <div class="wrap">
+      <div class="trust-item">💬 <b>Komunikasi langsung</b>&nbsp;1-on-1 sama Iky</div>
+      <div class="trust-item">⚡ <b>Proses cepat</b>&nbsp;1-7 hari kerja</div>
+      <div class="trust-item">🔁 <b>Revisi</b>&nbsp;sesuai paket</div>
+      <div class="trust-item">💳 <b>Bisa DP</b>&nbsp;dulu sebelum lunas</div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Kenapa Pilih Iky Store?</h2>
+      <p>Bukan cuma bikin website — tapi bikin identitas digital yang beda dari yang lain.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">🎨</div>
+        <h3>Desain Custom</h3>
+        <p>Bukan template generik — tiap website didesain ulang sesuai kebutuhan &amp; karakter kamu.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">🎬</div>
+        <h3>Loading Screen Custom</h3>
+        <p>Efek loading dengan video/animasi kamu sendiri, progress bar, dan status berjalan.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">📜</div>
+        <h3>Animasi Scroll</h3>
+        <p>Tiap section muncul halus saat di-scroll, bikin pengalaman terasa hidup.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">🏆</div>
+        <h3>Sentuhan Gamified</h3>
+        <p>Opsional: tambahkan XP, badge, atau elemen interaktif biar situsmu makin nempel di ingatan.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">📱</div>
+        <h3>Full Responsive</h3>
+        <p>Rapi di HP, tablet, sampai desktop — termasuk menu mobile yang nyaman dipakai.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">💬</div>
+        <h3>Kontak Terintegrasi</h3>
+        <p>Tombol kontak langsung buka WhatsApp dengan pesan yang sudah terisi otomatis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sec-head reveal">
+      <h2>Paket Layanan</h2>
+      <p>Mulai dari yang simpel sampai yang lengkap — tinggal pilih sesuai kebutuhan.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="tag">Starter</div>
+        <div class="service-card__price">Rp150rb <span>/ sekali bayar</span></div>
+        <ul>
+          <li>Portofolio satu halaman</li>
+          <li>Responsive mobile &amp; desktop</li>
+          <li>Kontak otomatis ke WA</li>
+          <li>1x revisi desain</li>
+        </ul>
+      </div>
+      <div class="service-card featured reveal">
+        <div class="tag">⭐ Gamified — Paling Laris</div>
+        <div class="service-card__price">Rp350rb <span>/ sekali bayar</span></div>
+        <ul>
+          <li>Semua fitur Starter</li>
+          <li>Loading screen custom</li>
+          <li>Animasi scroll &amp; mode gelap/terang</li>
+          <li>Gamifikasi XP pengunjung</li>
+          <li>2x revisi desain</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="tag">Ultimate</div>
+        <div class="service-card__price">Rp650rb <span>/ sekali bayar</span></div>
+        <ul>
+          <li>Semua fitur Gamified</li>
+          <li>Loading screen pakai video sendiri</li>
+          <li>Visualisasi tech stack interaktif</li>
+          <li>Revisi sampai puas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-32">
+      <a href="layanan.html" class="btn btn--ghost">Lihat Detail Lengkap Semua Paket →</a>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="cta-band reveal">
+      <h2>Siap Punya Website Sendiri?</h2>
+      <p style="max-width:480px;margin:0 auto 28px;">Chat langsung, ceritain kebutuhan kamu — nanti dibantu pilihin paket yang paling pas.</p>
+      <a href="kontak.html" class="btn btn--primary">Chat &amp; Pesan Sekarang</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+          <span class="brand__name">Iky Store</span>
+        </a>
+        <p>Jasa pembuatan website portofolio custom — modern, cepat, dan dikerjain langsung 1-on-1 sama Iky.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="galeri.html">Galeri Karya</a>
+        <a href="testimoni.html">Testimoni</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/6287888424035" target="_blank">WhatsApp</a>
+        <a href="kontak.html">Halaman Kontak</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Iky Store</div>
+      <div class="mono">Website Portfolio Service</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
