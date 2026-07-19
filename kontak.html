@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — Iky Store</title>
+<meta name="description" content="Hubungi Iky Store lewat WhatsApp untuk pesan website portofolio kamu.">
+<link rel="icon" href="media/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.kontak-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.pick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0 28px; }
+.pick-card {
+  background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; padding: 16px;
+  cursor: pointer; text-align: left; transition: border-color .15s ease, background .15s ease;
+}
+.pick-card.selected { border-color: var(--blue); background: rgba(59,130,246,.1); }
+.pick-card__name { font-family: var(--font-display); font-weight: 700; font-size: .92rem; color: var(--white); }
+.pick-card__price { font-family: var(--font-mono); font-size: .78rem; color: var(--blue-light); margin-top: 4px; }
+
+.contact-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+.contact-row { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.contact-row:last-child { border-bottom: none; }
+.contact-row__icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(59,130,246,.12); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.contact-row__label { font-size: .74rem; color: var(--slate); text-transform: uppercase; letter-spacing: .04em; font-family: var(--font-mono); }
+.contact-row__value { font-family: var(--font-display); font-weight: 700; color: var(--white); }
+
+@media (max-width: 860px) {
+  .kontak-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .pick-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="brand">
+      <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+      <span class="brand__name">Iky Store</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="navlinks-wrap" id="navMenu">
+      <div class="navlinks">
+        <a href="index.html" class="navlink">Beranda</a>
+        <a href="tentang.html" class="navlink">Tentang</a>
+        <a href="layanan.html" class="navlink">Layanan</a>
+        <a href="galeri.html" class="navlink">Galeri Karya</a>
+        <a href="testimoni.html" class="navlink">Testimoni</a>
+        <a href="kontak.html" class="btn btn--primary btn--sm">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="tag mb-16" style="margin:0 auto 16px;width:fit-content;"><span class="dot"></span>Kontak</div>
+    <h1 class="reveal">Yuk Ngobrol Dulu</h1>
+    <p class="reveal">Pilih paket yang kamu minati (opsional), lalu chat langsung — semua detail dibahas di WhatsApp.</p>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0;">
+    <div class="kontak-grid">
+      <div class="reveal">
+        <h2 style="font-size:1.2rem;">Mau Paket yang Mana?</h2>
+        <div class="pick-grid" id="pickGrid">
+          <div class="pick-card" data-paket="Starter" data-harga="Rp150.000">
+            <div class="pick-card__name">Starter</div>
+            <div class="pick-card__price">Rp150.000</div>
+          </div>
+          <div class="pick-card" data-paket="Gamified" data-harga="Rp350.000">
+            <div class="pick-card__name">Gamified ⭐</div>
+            <div class="pick-card__price">Rp350.000</div>
+          </div>
+          <div class="pick-card" data-paket="Ultimate" data-harga="Rp650.000">
+            <div class="pick-card__name">Ultimate</div>
+            <div class="pick-card__price">Rp650.000</div>
+          </div>
+          <div class="pick-card" data-paket="Belum tahu, mau tanya-tanya dulu" data-harga="">
+            <div class="pick-card__name">Belum Tahu</div>
+            <div class="pick-card__price">Tanya dulu aja</div>
+          </div>
+        </div>
+
+        <a href="#" target="_blank" id="waBtn" class="btn btn--primary btn--full">💬 Chat WhatsApp Sekarang</a>
+        <p style="font-size:.78rem; margin-top:12px;">Pesan otomatis udah keisi sesuai paket yang kamu pilih — tinggal dikirim, atau diedit dulu kalau mau.</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <h3 style="font-size:1.05rem;margin-bottom:6px;">Info Kontak</h3>
+        <div class="contact-row">
+          <div class="contact-row__icon">📱</div>
+          <div>
+            <div class="contact-row__label">WhatsApp</div>
+            <div class="contact-row__value">+62 878-8842-4035</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row__icon">⏱️</div>
+          <div>
+            <div class="contact-row__label">Respon Chat</div>
+            <div class="contact-row__value">Biasanya dalam 1x24 jam</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row__icon">🌐</div>
+          <div>
+            <div class="contact-row__label">Domisili</div>
+            <div class="contact-row__value">Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand__mark"><img src="media/logo.png" alt="Iky Store"></div>
+          <span class="brand__name">Iky Store</span>
+        </a>
+        <p>Jasa pembuatan website portofolio custom — modern, cepat, dan dikerjain langsung 1-on-1 sama Iky.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="galeri.html">Galeri Karya</a>
+        <a href="testimoni.html">Testimoni</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/6287888424035" target="_blank">WhatsApp</a>
+        <a href="kontak.html">Halaman Kontak</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Iky Store</div>
+      <div class="mono">Website Portfolio Service</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var WA_NUMBER = '6287888424035';
+  var cards = document.querySelectorAll('.pick-card');
+  var waBtn = document.getElementById('waBtn');
+
+  function buildMessage(paket, harga) {
+    if (!harga) {
+      return 'Halo kak Iky, saya mau tanya-tanya soal jasa pembuatan website portofolio.';
+    }
+    return 'Halo kak Iky, saya mau pesan paket ' + paket + ' (' + harga + ') untuk jasa pembuatan website portofolio.';
+  }
+
+  function selectCard(card) {
+    cards.forEach(function (c) { c.classList.remove('selected'); });
+    card.classList.add('selected');
+    var msg = buildMessage(card.dataset.paket, card.dataset.harga);
+    waBtn.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  }
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () { selectCard(card); });
+  });
+
+  // Baca ?paket= dari URL (dikirim dari halaman Layanan) buat preselect otomatis
+  var params = new URLSearchParams(window.location.search);
+  var paketParam = params.get('paket');
+  var matched = false;
+  if (paketParam) {
+    cards.forEach(function (card) {
+      if (card.dataset.paket === paketParam) { selectCard(card); matched = true; }
+    });
+  }
+  if (!matched) { selectCard(cards[cards.length - 1]); } // default: "Belum Tahu"
+})();
+</script>
+</body>
+</html>
